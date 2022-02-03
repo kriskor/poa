@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
         //
         require_once __DIR__ . '/../Http/Helpers/Util.php';
         require_once __DIR__ . '/../Http/Helpers/Navigation.php';
+        Schema::defaultStringLength(191);
     }
 
     /**
